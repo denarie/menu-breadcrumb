@@ -44,11 +44,11 @@ class Menu_Breadcrumb_Public {
 	}
 
 	public function wrap_breadcrumb_item( $markup, $breadcrumb ) {
-		return '<span typeof="v:Breadcrumb">' . $markup . '</span>';
+		return '<span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">' . $markup . '</span>';
 	}
 
 	public function wrap_breadcrumb( $markup ) {
-		return '<span prefix="v: http://rdf.data-vocabulary.org/#">' . $markup . '</span>';
+		return '<span itemscope itemtype="http://schema.org/BreadcrumbList">' . $markup . '</span>';
 	}
 
 }
